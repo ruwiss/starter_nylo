@@ -1,24 +1,12 @@
-import 'package:url_launcher/url_launcher.dart';
-import 'controller.dart';
+import '/app/controllers/controller.dart';
+import 'package:flutter/widgets.dart';
 
 class HomeController extends Controller {
-  onTapDocumentation() async {
-    await launchUrl(Uri.parse("https://nylo.dev/docs"));
+
+  @override
+  void construct(BuildContext context) {
+    super.construct(context);
+
   }
 
-  onTapGithub() async {
-    await launchUrl(Uri.parse("https://github.com/nylo-core/nylo"));
-  }
-
-  onTapChangeLog() async {
-    await launchUrl(Uri.parse("https://github.com/nylo-core/nylo/releases"));
-  }
-
-  onTapYouTube() async {
-    await launchUrl(Uri.parse("https://m.youtube.com/@nylo_dev"));
-  }
-
-  onTapX() async {
-    await launchUrl(Uri.parse("https://x.com/nylo_dev"));
-  }
 }

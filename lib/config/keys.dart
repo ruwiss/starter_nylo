@@ -23,7 +23,5 @@ class Keys {
 
   static StorageKey bearerToken = 'SK_BEARER_TOKEN';
 
-  // static StorageKey coins = 'SK_COINS';
-
   /// Add your storage keys here...
 }
