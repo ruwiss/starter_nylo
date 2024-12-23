@@ -1,4 +1,3 @@
-import '/app/events/logout_event.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 /* Events
@@ -9,6 +8,4 @@ import 'package:nylo_framework/nylo_framework.dart';
 | Learn more: https://nylo.dev/docs/6.x/events
 |-------------------------------------------------------------------------- */
 
-final Map<Type, NyEvent> events = {
-  LogoutEvent: LogoutEvent(),
-};
+final Map<Type, NyEvent> events = {};

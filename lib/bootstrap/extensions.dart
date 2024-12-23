@@ -9,8 +9,10 @@ extension NyText on Text {
       BuildContext context, Color Function(ColorStyles color) newColor,
       {String? themeId}) {
     return copyWith(
-        style: TextStyle(
-            color: newColor(ThemeColor.get(context, themeId: themeId))));
+      style: TextStyle(
+        color: newColor(ThemeColor.get(context, themeId: themeId)),
+      ),
+    );
   }
 }
 

@@ -28,6 +28,8 @@ class Main extends StatelessWidget {
       child: LocalizedApp(
         child: ThemeProvider(
           themes: appThemes,
+          loadThemeOnInit: true,
+          saveThemesOnChange: true,
           child: ThemeConsumer(
             child: ValueListenableBuilder(
               valueListenable: ValueNotifier(NyLocalization.instance.locale),
