@@ -1,4 +1,4 @@
-package com.pretty.example
+package com.nylo.android
 
 import android.content.ContentResolver
 import android.content.Context
