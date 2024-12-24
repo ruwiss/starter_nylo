@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nylo_framework/nylo_framework.dart';
 import '/resources/themes/styles/color_styles.dart';
 
 /* Light Theme Colors
@@ -34,7 +35,8 @@ class LightThemeColors implements ColorStyles {
   @override
   Color get buttonSecondaryBackground => const Color(0xff151925);
   @override
-  Color get buttonSecondaryContent => Colors.white.withAlpha((255.0 * 0.9).round());
+  Color get buttonSecondaryContent =>
+      Colors.white.withAlpha((255.0 * 0.9).round());
 
   // bottom tab bar
   @override
@@ -55,4 +57,13 @@ class LightThemeColors implements ColorStyles {
   // toast notification
   @override
   Color get toastNotificationBackground => Colors.white;
+
+  @override
+  Color get icon => Colors.black;
+
+  @override
+  Color get shadowColor => "#E4E4E4".toHexColor();
+
+  @override
+  Color get modalBarrierColor => Colors.black54;
 }

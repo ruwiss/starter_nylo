@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:wolt_modal_sheet/wolt_modal_sheet.dart';
 import '/config/design.dart';
 import '/resources/themes/styles/color_styles.dart';
 import '/resources/themes/text_theme/default_text_theme.dart';
@@ -40,6 +41,7 @@ ThemeData darkTheme(ColorStyles color) {
           foregroundColor: color.buttonContent,
           backgroundColor: color.buttonBackground),
     ),
+    iconTheme: IconThemeData(color: color.icon, size: 24.0),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: color.bottomTabBarBackground,
       unselectedIconTheme:
@@ -54,6 +56,14 @@ ThemeData darkTheme(ColorStyles color) {
       primary: color.primaryAccent,
       onSurface: Colors.black,
     ),
+    extensions: [
+      WoltModalSheetThemeData(
+        heroImageHeight: 250,
+        topBarShadowColor: color.shadowColor,
+        modalBarrierColor: color.modalBarrierColor,
+        mainContentScrollPhysics: ClampingScrollPhysics(),
+      ),
+    ],
   );
 }
 
@@ -64,8 +74,12 @@ TextTheme _textTheme(ColorStyles colors) {
   TextTheme textTheme = const TextTheme()
       .apply(displayColor: colors.content, bodyColor: colors.content);
   return textTheme.copyWith(
-      titleLarge: TextStyle(color: colors.content.withAlpha((255.0 * 0.8).round())),
-      labelLarge: TextStyle(color: colors.content.withAlpha((255.0 * 0.8).round())),
-      bodySmall: TextStyle(color: colors.content.withAlpha((255.0 * 0.8).round())),
-      bodyMedium: TextStyle(color: colors.content.withAlpha((255.0 * 0.8).round())));
+      titleLarge:
+          TextStyle(color: colors.content.withAlpha((255.0 * 0.8).round())),
+      labelLarge:
+          TextStyle(color: colors.content.withAlpha((255.0 * 0.8).round())),
+      bodySmall:
+          TextStyle(color: colors.content.withAlpha((255.0 * 0.8).round())),
+      bodyMedium:
+          TextStyle(color: colors.content.withAlpha((255.0 * 0.8).round())));
 }

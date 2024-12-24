@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nylo_framework/nylo_framework.dart';
 import '/resources/themes/styles/color_styles.dart';
 
 /* Dark Theme Colors
@@ -55,4 +56,13 @@ class DarkThemeColors implements ColorStyles {
   // toast notification
   @override
   Color get toastNotificationBackground => const Color(0xff3e4447);
+
+  @override
+  Color get icon => Colors.white;
+
+  @override
+  Color get shadowColor => "#121212".toHexColor();
+
+  @override
+  Color get modalBarrierColor => Colors.black54;
 }

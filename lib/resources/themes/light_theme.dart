@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:wolt_modal_sheet/wolt_modal_sheet.dart';
 import '/config/design.dart';
 import '/resources/themes/styles/color_styles.dart';
 import '/resources/themes/text_theme/default_text_theme.dart';
@@ -43,6 +44,7 @@ ThemeData lightTheme(ColorStyles color) {
           foregroundColor: color.buttonContent,
           backgroundColor: color.buttonBackground),
     ),
+    iconTheme: IconThemeData(color: color.icon, size: 24.0),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: color.bottomTabBarBackground,
       unselectedIconTheme:
@@ -58,6 +60,14 @@ ThemeData lightTheme(ColorStyles color) {
       onSecondary: Colors.white,
       primary: color.primaryAccent,
     ),
+    extensions: [
+      WoltModalSheetThemeData(
+        heroImageHeight: 250,
+        topBarShadowColor: color.shadowColor,
+        modalBarrierColor: color.modalBarrierColor,
+        mainContentScrollPhysics: ClampingScrollPhysics(),
+      ),
+    ],
   );
 }
 
@@ -67,5 +77,6 @@ ThemeData lightTheme(ColorStyles color) {
 TextTheme _textTheme(ColorStyles colors) {
   TextTheme textTheme = const TextTheme().apply(displayColor: colors.content);
   return textTheme.copyWith(
-      labelLarge: TextStyle(color: colors.content.withAlpha((255.0 * 0.8).round())));
+      labelLarge:
+          TextStyle(color: colors.content.withAlpha((255.0 * 0.8).round())));
 }

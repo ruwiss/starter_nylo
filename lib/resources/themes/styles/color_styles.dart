@@ -55,6 +55,12 @@ abstract class ColorStyles extends BaseColorStyles {
   // toast notification
   Color get toastNotificationBackground;
 
+  Color get icon;
+
+  Color get shadowColor;
+
+  Color get modalBarrierColor;
+
   // e.g. add a new style
   // Uncomment the below:
   // Color get iconBackground;
